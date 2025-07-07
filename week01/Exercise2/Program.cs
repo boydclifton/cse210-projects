@@ -1,23 +1,26 @@
 using System;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("What is your grade percentage? ");
-        string answer = Console.ReadLine();
-        int percent = int.Parse(answer);
 
+        Console.Write("What is your grade percentage for this semester? ");
+        string valueFromUser = Console.ReadLine();
+        int percent = int.Parse(valueFromUser);
         string letter = "";
-
+        string symbol = "";
+        
 
 
         if (percent >= 90)
         {
             letter = "A";
         }
+
         else if (percent >= 80)
         {
             letter = "B";
@@ -39,18 +42,49 @@ class Program
         }
 
         int lastDigit = percent % 10;
-        string symbol = "";
-        if (lastDigit >= 7 && letter != "A" && letter != "F")
+
+        if (letter != "F")
         {
-            symbol = "+";
+            if (lastDigit >= 7)
+            {
+                symbol = "+";
+            }
+            else if (lastDigit <= 3)
+            {
+                symbol = "-";
+            }
+
+            else
+            {
+                symbol = "";
+            }
         }
-        else if (lastDigit < 3 && letter != "A" && letter != "F")
+
+        if (letter == "A")
         {
-            symbol = "-";
+            if (lastDigit <= 3)
+            {
+                symbol = "-";
+            }
+
+            else if (lastDigit > 3)
+            {
+                symbol = "";
+            }
         }
 
 
-        Console.WriteLine($"You have earned the grade of {letter}{symbol}");
 
+        Console.WriteLine($"Your letter grade is {letter}{symbol}");
+
+        if (percent >= 70)
+        {
+            Console.WriteLine("You have passed the class");
+        }
+
+        else
+        {
+            Console.WriteLine("You have not passed the class");
+        }
     }
 }
