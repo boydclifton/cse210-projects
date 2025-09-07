@@ -3,44 +3,91 @@ using System.ComponentModel.DataAnnotations;
 
 class Program
 {
+    // static void Main(string[] args)
+    // {
+    //     DisplayWelcomeMessage();
+    //     string name = PromptUserName();
+    //     int number = PromptUserNumber();
+    //     int squareNumber = SquareNumber(number);
+    //     DisplayResult(name, squareNumber);
+
+
+    // }
+
+    // static void DisplayWelcomeMessage()
+    // {
+    //     Console.WriteLine("Welcome to the Program!");
+    // }
+
+    // static string PromptUserName()
+    // {
+    //     Console.Write("Please enter your username: ");
+    //     string userName = Console.ReadLine();
+    //     return userName;
+    // }
+
+    // static int PromptUserNumber()
+    // {
+    //     Console.Write("Please type in your favorite number: ");
+    //     int number = int.Parse(Console.ReadLine());
+    //     return number;
+    // }
+
+    // static int SquareNumber(int number)
+    // {
+    //     int squaredNumber = number * number;
+    //     return squaredNumber;
+    // }
+
+    // static void DisplayResult(string name, int squareNumber)
+    // {
+    //     Console.WriteLine($"Hello {name}, your number squared is {squareNumber}.");
+    // }
+
+
+
     static void Main(string[] args)
     {
-        DisplayWelcomeMessage();
+        DisplayWelcome();
         string name = PromptUserName();
         int number = PromptUserNumber();
-        int squareNumber = SquareNumber(number);
-        DisplayResult(name, squareNumber);
+        int squaredNumber = SquareNumber(number);
+        DisplayResult(name, squaredNumber);
 
 
-    }
+        static void DisplayWelcome()
+        {
+            Console.WriteLine("Welcome to the Program!");
+        }
 
-    static void DisplayWelcomeMessage()
-    {
-        Console.WriteLine("Welcome to the Program!");
-    }
+        static string PromptUserName()
+        {
+            Console.Write("Please enter your username: ");
+            string userName = Console.ReadLine();
+            return userName;
+        }
 
-    static string PromptUserName()
-    {
-        Console.Write("Please enter your username: ");
-        string userName = Console.ReadLine();
-        return userName;
-    }
+        static int PromptUserNumber()
+        {
+            Console.Write("Please enter your user number: ");
+            int userNumber = int.Parse(Console.ReadLine());
+            return userNumber;
+        }
 
-    static int PromptUserNumber()
-    {
-        Console.Write("Please type in your favorite number: ");
-        int number = int.Parse(Console.ReadLine());
-        return number;
-    }
+        static int SquareNumber(int userNumber)
+        {
+            int squaredNumber = userNumber * userNumber;
+            return squaredNumber;
 
-    static int SquareNumber(int number)
-    {
-        int squaredNumber = number * number;
-        return squaredNumber;
-    }
+        }
 
-    static void DisplayResult(string name, int squareNumber)
-    {
-        Console.WriteLine($"Hello {name}, your number squared is {squareNumber}.");
+        static void DisplayResult(string userName, int squaredNumber)
+        {
+            Console.WriteLine($"Your username is {userName} and your user number squared is {squaredNumber}.");
+        }
+
+
+
+
     }
 }
