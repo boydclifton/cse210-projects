@@ -7,31 +7,28 @@ class Program
 {
     static void Main(string[] args)
     {
-
-        Console.Write("What is your grade percentage for this semester? ");
-        string valueFromUser = Console.ReadLine();
-        int percent = int.Parse(valueFromUser);
-        string letter = "";
+        Console.Write("Please type the grade percentage you got for this course: ");
+        string userInput = Console.ReadLine();
+        int grade = int.Parse(userInput);
         string symbol = "";
-        
+        string letter = "";
 
-
-        if (percent >= 90)
+        if (grade >= 90)
         {
             letter = "A";
         }
 
-        else if (percent >= 80)
+        else if (grade >= 80)
         {
             letter = "B";
         }
 
-        else if (percent >= 70)
+        else if (grade >= 70)
         {
             letter = "C";
         }
 
-        else if (percent >= 60)
+        else if (grade >= 60)
         {
             letter = "D";
         }
@@ -41,50 +38,37 @@ class Program
             letter = "F";
         }
 
-        int lastDigit = percent % 10;
-
+        int lastDigit = grade % 10;
         if (letter != "F")
         {
             if (lastDigit >= 7)
             {
                 symbol = "+";
             }
+
             else if (lastDigit <= 3)
             {
                 symbol = "-";
             }
-
-            else
-            {
-                symbol = "";
-            }
         }
 
-        if (letter == "A")
+        if (letter == "A" && symbol == "+")
         {
-            if (lastDigit <= 3)
-            {
-                symbol = "-";
-            }
-
-            else if (lastDigit > 3)
-            {
-                symbol = "";
-            }
+            symbol = "";
         }
+        
 
 
-
-        Console.WriteLine($"Your letter grade is {letter}{symbol}");
-
-        if (percent >= 70)
+        if (grade >= 70)
         {
-            Console.WriteLine("You have passed the class");
+            Console.WriteLine("Congratulatins, you passed the class!");
         }
 
         else
         {
-            Console.WriteLine("You have not passed the class");
+            Console.WriteLine("You did not pass the class this year");
         }
+
+        Console.WriteLine($"You received the letter grade of {letter}{symbol} for the semester.");
     }
 }
