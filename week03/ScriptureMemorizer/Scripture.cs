@@ -34,16 +34,16 @@ public class Scripture
     {
         Random rand = new Random();
 
-        List<Word> _visibleWords = new List<Word>();
+        List<Word> _nonHiddenWords = new List<Word>();
         foreach (Word word in _words)
         {
             if (word.IsHidden() == false)
             {
-                _visibleWords.Add(word);
+                _nonHiddenWords.Add(word);
             }
         }
 
-        if (_visibleWords.Count == 0)
+        if (_nonHiddenWords.Count == 0)
         {
             return;
         }
@@ -51,15 +51,15 @@ public class Scripture
         for (int i = 0; i < numberToHide; i++)
         {
 
-            if (_visibleWords.Count == 0)
+            if (_nonHiddenWords.Count == 0)
             {
                 break;
             }
 
-            int index = rand.Next(_visibleWords.Count);
-            Word wordToHide = _visibleWords[index];
+            int index = rand.Next(_nonHiddenWords.Count);
+            Word wordToHide = _nonHiddenWords[index];
             wordToHide.Hide();
-            _visibleWords.RemoveAt(index);
+            _nonHiddenWords.RemoveAt(index);
         }
     }
 
