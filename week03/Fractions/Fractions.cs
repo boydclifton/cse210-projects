@@ -1,3 +1,6 @@
+using System;
+
+
 public class Fraction
 {
     private int _top;
@@ -15,10 +18,10 @@ public class Fraction
         _bottom = 1;
     }
 
-    public Fraction(int top, int bottom)
+    public Fraction(int num, int denom)
     {
-        _top = top;
-        _bottom = bottom;
+        _top = num;
+        _bottom = denom;
     }
 
     public string GetFractionString()
@@ -27,8 +30,12 @@ public class Fraction
         return text;
     }
 
-    public double GetDecimalString()
+    public double GetDecimalValue()
     {
         return (double)_top / (double)_bottom;
     }
-}
+
+    
+
+
+ }
