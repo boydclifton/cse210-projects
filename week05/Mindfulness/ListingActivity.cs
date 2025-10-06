@@ -44,7 +44,7 @@ public void Run()
         Console.WriteLine("List as many responses as you can to the following prompt:");
         Console.WriteLine($"--- {prompt} ---");
         Console.WriteLine();
-        Console.WriteLine("You will begin shortly...");
+        Console.WriteLine("Get Ready...");
         ShowCountDown(5);
 
         
@@ -80,8 +80,8 @@ public void Run()
 
         
         Console.WriteLine();
-        Console.WriteLine("Time's up!");
-        Console.WriteLine($"You listed {itemsListed} items!");
+        Console.WriteLine("No time remaining.");
+        Console.WriteLine($"You listed {itemsListed} items.");
 
 
 
