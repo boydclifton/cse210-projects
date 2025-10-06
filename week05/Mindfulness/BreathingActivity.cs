@@ -6,7 +6,7 @@ public class BreathingActivity : Activity
 {
     public BreathingActivity() :
         base("Breathing Activity",
-             "This activity helps you relax by guiding you through slow breathing. Focus on each breath.")
+             "This activity helps you relax with mindful breathing. Calmly focus on each breathe.")
     { }
 
     public void Run()
