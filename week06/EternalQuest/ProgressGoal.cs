@@ -31,7 +31,7 @@ namespace EternalQuest
             }
             else if (_progress == _target)
             {
-                Console.WriteLine($"\n🏁 Amazing! You reached your goal: '{GetShortName()}'!");
+                Console.WriteLine($"\n Amazing! You reached your goal: '{GetShortName()}'!");
                 Console.WriteLine($"You’ve completed {_target}/{_target} total progress.");
                 Console.WriteLine($"You earned {GetPoints()} points plus a {_bonus}-point bonus!");
             }
