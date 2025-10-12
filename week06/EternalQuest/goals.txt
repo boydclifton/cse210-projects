@@ -1,0 +1,2 @@
+20
+ProgressGoal|run a marathon|practice for the boston marathon by running 1 mile a day until i hit 50 miles |20|1|50|150
