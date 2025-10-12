@@ -43,7 +43,7 @@ namespace EternalQuest
             return $"{status} {GetShortName()} - {GetDescription()} ({GetPoints()} points)";
         }
 
-                public override string GetStringRepresentation()
+        public override string GetStringRepresentation()
         {
             return $"SimpleGoal|{GetShortName()}|{GetDescription()}|{GetPoints()}|{_isComplete}";
         }

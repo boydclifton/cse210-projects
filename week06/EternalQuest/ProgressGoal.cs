@@ -18,7 +18,7 @@ namespace EternalQuest
 
         public override void RecordEvent()
         {
-            Console.Write($"\nHow much progress did you make toward '{GetShortName()}' today (respond with an integer)?");
+            Console.Write($"\nHow much progress did you make toward '{GetShortName()}' today? ");
             int amount = int.Parse(Console.ReadLine());
 
             _progress += amount;
